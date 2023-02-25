@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
 import Players from './Players';
-import samplePlayers from './sampleData/players.json';
+// import samplePlayers from './sampleData/players.json';
 
 function App() {
   // set state
@@ -9,12 +9,12 @@ function App() {
 
 // first data grab
   useEffect(() => {
-    // fetch("http://localhost:9292/players")
-    //   .then((resp) => resp.json())
-    //   .then((data) => {
-    //     setPlayers(data)
-    //   });
-    console.log('fetch("http://localhost:9292/players"), setPlayers(data)')
+    fetch("http://localhost:5000/getData")
+      .then((resp) => resp.json())
+      .then((data) => {
+        setPlayers(data)
+      });
+    console.log('fetch("http://localhost:5000/getData"), setPlayers(data)')
   }, []);
 
 // update Players on page after edit
@@ -33,7 +33,7 @@ function App() {
         <div>
           <p>Players table</p>
           <Players 
-          players={samplePlayers}
+          players={players}
           onUpdatePlayer={onUpdatePlayer}
            />
         </div>
