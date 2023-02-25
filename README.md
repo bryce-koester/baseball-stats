@@ -1,1 +1,1 @@
-Run both front end and backend on localhost to run app locally, see individual readme's
+Run both front end and backend on localhost to run app locally, see README's in each directory for instructions
