@@ -1,0 +1,26 @@
+[
+{
+    "id": 0,
+    "name": "Bryce",
+    "age": 24,
+    "velocity": 85
+    },
+{
+    "id": 1,
+    "name": "Parker",
+    "age": 13,
+    "velocity": 35
+    },
+{
+    "id": 2,
+    "name": "Garrett",
+    "age": 24,
+    "velocity": 80
+    },
+{
+    "id": 3,
+    "name": "Joe",
+    "age": 23,
+    "velocity": 69
+}
+]
