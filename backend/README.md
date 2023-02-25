@@ -1,0 +1,1 @@
+cd into /backend/ and run `node server.js` to start the backend server on the designated port

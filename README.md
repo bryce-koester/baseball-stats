@@ -1,1 +1,1 @@
-See Readmes in frontend and backend folders
+Run both front end and backend on localhost to run app locally, see individual readme's
