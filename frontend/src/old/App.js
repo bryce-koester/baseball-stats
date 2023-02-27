@@ -9,12 +9,12 @@ function App() {
 
 // first data grab
   useEffect(() => {
-    fetch("http://localhost:5000/getData")
+    fetch("http://localhost:5000/players/all")
       .then((resp) => resp.json())
       .then((data) => {
         setPlayers(data)
       });
-    console.log('fetch("http://localhost:5000/getData"), setPlayers(data)')
+    console.log('fetch("http://localhost:5000/players/all"), setPlayers(data)')
   }, []);
 
 // update Players on page after edit
@@ -26,6 +26,11 @@ function App() {
         } else {return player}
       }
     )
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updatedPlayer)
+    }
     setPlayers(updatedPlayers)
   }
   return (
