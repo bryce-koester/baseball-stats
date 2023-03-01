@@ -73,13 +73,11 @@ const Players = () => {
 
   return (
     <div className="player-list-wrapper">
-      {/* Open add player form */}
-      
-    
-      {/* Render Form for creating new player */}
+      {/* Show form or button to open form */}
       {showAddForm ? 
-      <AddPlayerForm fetchplayers={fetchplayers} setShowAddForm={wrapperSetShowAddForm}></AddPlayerForm> : 
-      <button onClick={handleShowAddForm} className="btn btn-add">Add new player</button>}
+        <AddPlayerForm fetchplayers={fetchplayers} setShowAddForm={wrapperSetShowAddForm}></AddPlayerForm> : 
+        <button onClick={handleShowAddForm} className="btn btn-add">Add new player</button>
+      }
       
       {/* Render Players list component */}
       <PlayersList players={players} loading={loading} handleplayerRemove={handleplayerRemove} />
