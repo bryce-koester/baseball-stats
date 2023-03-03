@@ -51,6 +51,10 @@ const AddPlayerForm = ({fetchplayers, setShowAddForm}) => {
         }
     }
 
+    const handleCancelForm = () => {
+      setShowAddForm(false)
+    }
+
   return (
     <div className="player-list-form">
         <div className="form-wrapper" onSubmit={handleplayerSubmit}>
@@ -78,8 +82,10 @@ const AddPlayerForm = ({fetchplayers, setShowAddForm}) => {
             </fieldset>
           </div>
         </div>
-
-        <button onClick={handleplayerSubmit} className="btn btn-add">Add the player</button>
+        <div className="form-buttons">
+          <button onClick={handleCancelForm} className="btn btn-add">Cancel</button>
+          <button onClick={handleplayerSubmit} className="btn btn-add">Add the player</button>  
+        </div>
       </div>
   )
 }

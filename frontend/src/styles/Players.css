@@ -97,3 +97,7 @@
   .btn-reset {
     margin: 21px auto 0;
   }
+
+  .form-buttons {
+    display: flex;
+  }
