@@ -18,7 +18,7 @@ const AddPlayerForm = ({fetchplayers, setShowAddForm}) => {
     const handleplayerCreate = () => {
         // Send POST request to 'players/create' endpoint
         axios
-            .post('http://localhost:5000/players/create', {
+            .post('http://localhost:4001/players/create', {
                 id: id,
                 name: name,
                 age: age,
