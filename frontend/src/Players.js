@@ -29,7 +29,7 @@ const Players = () => {
   const fetchplayers = async () => {
     // Send GET request to 'players/all' endpoint
     axios
-      .get('http://localhost:5000/players/all')
+      .get('http://localhost:4001/players/all')
       .then(response => {
         // Update the players state
         setplayers(response.data)
@@ -44,7 +44,7 @@ const Players = () => {
   const handleplayerRemove = (id, name) => {
     // Send PUT request to 'players/delete' endpoint
     axios
-      .put('http://localhost:5000/players/delete', { id: id })
+      .put('http://localhost:4001/players/delete', { id: id })
       .then(() => {
         console.log(`player ${name} removed.`)
 
@@ -58,7 +58,7 @@ const Players = () => {
   // Reset player list (remove all players)
   const handleListReset = () => {
     // Send PUT request to 'players/reset' endpoint
-    axios.put('http://localhost:5000/players/reset')
+    axios.put('http://localhost:4001/players/reset')
     .then(() => {
       // Fetch all players to refresh
       // the players on the Players list

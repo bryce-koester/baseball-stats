@@ -10,7 +10,7 @@ const playersRouter = require('./routes/players-route')
 
 // Set default port for express app
 // const PORT = process.env.PORT || 4001
-const PORT = 5000
+const PORT = 4001
 
 // Create express app
 const app = express()
